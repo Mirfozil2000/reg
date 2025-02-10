@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/index.css">
+</head>
+<body>
+    <form id="login-form">
+        <img src="./images/images-removebg-preview.png" alt="User Avatar">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" placeholder="Enter your full name" required>
+        <label for="class-select">Which class?</label>
+        <select id="class-select">
+            <option value="">Select your class</option>
+            <option value="9-A">9-A</option>
+            <option value="9-B">9-B</option> 
+            <option value="9-C">9-C</option>
+            <option value="9-D">9-D</option>
+            <option value="9-E">9-E</option>
+            <option value="9-F">9-F</option>
+            <option value="10-A">10-A</option>
+            <option value="10-B">10-B</option>
+            <option value="10-C">10-C</option>
+            <option value="10-D">10-D</option>
+            <option value="10-E">10-E</option>
+            <option value="10-F">10-F</option>
+            <option value="11-A">11-A</option>
+            <option value="11-B">11-B</option>
+            <option value="admin">admin</option>
+        </select>
+        <button type="submit">Login</button>
+        <div class="error-message" id="error-message" style="display:none;">there is no such student</div>
+    </form>
+    <script>
+        async function loadUsers() {
+            const res = await fetch('users.json');
+            let data = await res.json(); 
+            return data;
+        }
+        loadUsers()
+        document.getElementById('login-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const fullName = document.getElementById('full-name').value;
+            const classSelect = document.getElementById('class-select').value;
+            const users = await loadUsers(); 
+            const user = users.find(u => u.fullName === fullName && u.class === classSelect);
+            if (user) {
+                window.location.href = 'lenta.html';
+            } else {
+                document.getElementById('error-message').style.display = 'block';
+            }
+        });
+    </script>
+</body>
+</html>
