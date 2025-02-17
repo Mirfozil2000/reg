@@ -39,6 +39,16 @@ label {
   width: 100%;
 }
 
+.password {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  outline: none;
+  border: 2px solid #ddd;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
 input[type=text],
 select {
   width: 100%;

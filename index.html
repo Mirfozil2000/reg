@@ -30,6 +30,8 @@
             <option value="11-B">11-B</option>
             <option value="admin">admin</option>
         </select>
+        <label for="">Password</label>
+        <input class="password" type="password" placeholder="Enter your password" required>
         <button type="submit">Login</button>
         <div class="error-message" id="error-message" style="display:none;">there is no such student</div>
     </form>
@@ -44,8 +46,9 @@
             event.preventDefault();
             const fullName = document.getElementById('full-name').value;
             const classSelect = document.getElementById('class-select').value;
+            let inputPassword = document.querySelector('.password').value
             const users = await loadUsers(); 
-            const user = users.find(u => u.fullName === fullName && u.class === classSelect);
+            const user = users.find(u => u.fullName === fullName && u.class === classSelect && u.password === inputPassword);
             if (user) {
                 window.location.href = 'lenta.html';
             } else {
