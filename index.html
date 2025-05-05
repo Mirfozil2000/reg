@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style/index.css">
 </head>
+
 <body>
     <form id="login-form">
         <img src="./images/images-removebg-preview.png" alt="User Avatar">
@@ -15,7 +17,7 @@
         <select id="class-select">
             <option value="">Select your class</option>
             <option value="9-A">9-A</option>
-            <option value="9-B">9-B</option> 
+            <option value="9-B">9-B</option>
             <option value="9-C">9-C</option>
             <option value="9-D">9-D</option>
             <option value="9-E">9-E</option>
@@ -35,19 +37,34 @@
         <button type="submit">Login</button>
         <div class="error-message" id="error-message" style="display:none;">there is no such student</div>
     </form>
-    <script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
+        const firebaseConfig = {
+            apiKey: "AIzaSyDOemnjo7js9OUVUcL3LoQa3RE40TSRpsA",
+            authDomain: "reggram-5edce.firebaseapp.com",
+            projectId: "reggram-5edce",
+            storageBucket: "reggram-5edce.firebasestorage.app",
+            messagingSenderId: "939964988780",
+            appId: "1:939964988780:web:b97bfa77467d89a7cf0749",
+            measurementId: "G-K9M3WY867K"
+        };
+        const app = initializeApp(firebaseConfig);
+        console.log(app)
+        const analytics = getAnalytics(app);
         async function loadUsers() {
             const res = await fetch('users.json');
-            let data = await res.json(); 
+            let data = await res.json();
             return data;
         }
         loadUsers()
-        document.getElementById('login-form').addEventListener('submit', async function(event) {
+        document.getElementById('login-form').addEventListener('submit', async function (event) {
             event.preventDefault();
             const fullName = document.getElementById('full-name').value;
             const classSelect = document.getElementById('class-select').value;
             let inputPassword = document.querySelector('.password').value
-            const users = await loadUsers(); 
+            const users = await loadUsers();
             const user = users.find(u => u.fullName === fullName && u.class === classSelect && u.password === inputPassword);
             if (user) {
                 window.location.href = 'lenta.html';
@@ -57,4 +74,5 @@
         });
     </script>
 </body>
+
 </html>

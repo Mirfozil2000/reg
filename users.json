@@ -7,12 +7,30 @@
     {
         "fullName": "Yuldasheva Sevinch",
         "class": "10-D",
-        "password": "123456"
+        "password": "123456",
+        "imgUrl": "",
+        "birthday": "3rd march 2009",
+        "age": "16 Yr",
+        "residence": "Uzbekistan",
+        "address": "Tashkent, UZB",
+        "email": "seviwa@gmail.com",
+        "phone": "77-173-03-09",
+        "telegram": "@1ts_seviwa",
+        "instagram": "seviwa" 
     },
     {
         "fullName": "Yusupova Ma'mura",
         "class": "10-C",
-        "password": "123456"
+        "password": "123456",
+        "imgUrl": "",
+        "birthday": "14th april 2009",
+        "age": "16 Yr",
+        "residence": "Uzbekistan",
+        "address": "Tashkent, UZB",
+        "email": "ma'mura@gmail.com",
+        "phone": "95-012-81-42",
+        "telegram": "_Ma'mura",
+        "instagram": "@abdurash1dovna_" 
     },
     {
         "fullName": "Abdullayev Muzaffar",
@@ -27,7 +45,15 @@
     {
         "fullName": "Jamoliddinova Moxinur",
         "class": "10-C",
-        "password": "123456"
+        "password": "123456",
+        "birthday": "6nd septemper 2008",
+        "age": "16 yr",
+        "residence": "Uzbekistan",
+        "address":"Tashkent, UZB",
+        "email":"info@domain.com",
+        "phone": "50-507-06-32",
+        "telegram": "fazl1dd1novna",
+        "instagram": "_.mokh1nur._06"
     },
     {
         "fullName": "Mamaraimov Mirjalol",
@@ -37,7 +63,16 @@
     {
         "fullName": "Rustamaliyev Barkamol",
         "class": "10-C",
-        "password": "123456"
+        "password": "123456",
+        "imgUrl": "",
+        "birthday": "2nd july 2009",
+        "age": "15 Yr",
+        "residence": "Uzbekistan",
+        "address": "Tashkent, UZB",
+        "email": "info@domain.com",
+        "phone": "90-123-45-67",
+        "telegram": "@rustamaliyev_barkamol",
+        "instagram": "barkamol"      
     },
     {
         "fullName": "Tursunboyev Xasan",
