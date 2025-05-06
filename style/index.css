@@ -3,7 +3,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../images/snowflake_bauble_blue_christmas_4k_hd_snowflake-3840x2160.jpg");
+  background: url("https://framerusercontent.com/images/lpm6kSy3DYBtZgFqx9xSI7DQa2s.png?scale-down-to=1024");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +14,7 @@ body {
 form {
   width: 400px;
   padding: 30px;
-  background-color: rgba(32, 77, 123, 0.8);
+  background-color: #0064ac;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
