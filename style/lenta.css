@@ -371,26 +371,3 @@
     .addComments .submitBtn:hover {
         background-color: #0056b3;
     }
-
-    .rating {
-        font-size: 20px;
-        color: gold;
-    }
-    
-    .rating .star {
-        cursor: pointer;
-    }
-    
-    .rating .star:hover {
-        color: darkgoldenrod;
-    }
-    
-    .right div {
-        margin-top: 15px;
-        background-color: #f9f9f9;
-        border-radius: 5px;
-    }
-    
-    .right p {
-        margin-bottom: 10px;
-    }
