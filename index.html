@@ -37,7 +37,25 @@
         <button type="submit">Login</button>
         <div class="error-message" id="error-message" style="display:none;">there is no such student</div>
     </form>
-
+    <script>
+        async function loadUsers() {
+            const res = await fetch('users.json');
+            let data = await res.json();
+            return data;
+        }
+        loadUsers()
+        document.getElementById('login-form').addEventListener('submit', async function (event) {
+            event.preventDefault();
+            const fullName = document.getElementById('full-name').value;
+            const classSelect = document.getElementById('class-select').value;
+            let inputPassword = document.querySelector('.password').value
+            const users = await loadUsers();
+            const user = users.find(u => u.fullName === fullName && u.class === classSelect && u.password === inputPassword);
+            if (user) {
+                window.location.href = 'lenta.html';
+            };
+        });
+    </script>
 </body>
 
 </html>
